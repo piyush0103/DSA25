@@ -2,7 +2,7 @@ package coder25.problemSolving1.Arrays.prefix;
 
 import java.util.Arrays;
 
-public class MaxConsecutiveonewith1swapPrefix {
+public class MaxConsecutiveonewith1Replace1ZeroPrefix {
     public static void main(String[] args) {
         int arr[] = {0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0};
         int maxConsecutiveZero = findMaxConsecutiveZero(arr, arr.length);
