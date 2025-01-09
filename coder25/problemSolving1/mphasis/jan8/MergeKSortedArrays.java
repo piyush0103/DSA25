@@ -27,7 +27,7 @@ public class MergeKSortedArrays {
         nSortedList.add(sortedList2);
         nSortedList.add(sortedList1);
         nSortedList.add(sortedList3);
-        List<Integer> sortedListAll = divideAndConquer(nSortedList, 0, nSortedList.size());
+        List<Integer> sortedListAll = divideAndConquer(nSortedList, 0, nSortedList.size()-1);
         System.out.println(sortedListAll);
 
     }
@@ -46,13 +46,13 @@ public class MergeKSortedArrays {
     private static List<Integer> mergeTwoArrays(List<Integer> list1, List<Integer> list2) {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
-        if (list2.size() > list1.size()) {
-            mergeTwoArrays(list2, list1);
-        }
         List<Integer> mergedList = new ArrayList<>();
         int i = 0;
         int j = 0;
-        while (j < list2.size()) {
+        while (j < list2.size() && i < list1.size()) {
+            System.out.println("i " + i);
+            System.out.println(" j " + j);
+            System.out.println("===============================");
             if (list1.get(i) > list2.get(j)) {
                 mergedList.add(list2.get(j));
                 j++;
@@ -65,6 +65,10 @@ public class MergeKSortedArrays {
         while (i < list1.size()) {
             mergedList.add(list1.get(i));
             i++;
+        }
+        while (j < list2.size()) {
+            mergedList.add(list2.get(j));
+            j++;
         }
         return mergedList;
 
