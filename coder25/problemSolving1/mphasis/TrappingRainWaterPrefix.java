@@ -16,9 +16,8 @@ public class TrappingRainWaterPrefix {
         }
         printArray(leftMax);
         printArray(rightMax);
-
         for (int i = 1; i < n - 1; i++) {
-            int minOf2 = Math.min(rightMax[i - 1], rightMax[i + 1]);
+            int minOf2 = Math.min(leftMax[i - 1], rightMax[i + 1]);
             if (minOf2 > arr[i]) {
                 res += minOf2 - arr[i];
             }
@@ -28,8 +27,8 @@ public class TrappingRainWaterPrefix {
 
     private static void printArray(int[] leftMax) {
         System.out.println("printing prefix");
-        for(int x:leftMax){
-            System.out.print(x+" ");
+        for (int x : leftMax) {
+            System.out.print(x + " ");
         }
         System.out.println();
     }

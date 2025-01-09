@@ -14,7 +14,7 @@ public class TrappingRainWater {
             int left = arr[i];
             for (int j = 0; j < i; j++)
                 left = Math.max(left, arr[j]);
-            System.out.println(left+" max");
+            System.out.println(left+"left  max");
             int right = arr[i];
             for (int j = i + 1; j < arr.length; j++)
                 right = Math.max(right, arr[j]);

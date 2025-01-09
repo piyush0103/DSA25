@@ -3,7 +3,7 @@ package coder25.problemSolving1.mphasis;
 public class PowerOf10 {
     public static void main(String[] args) {
         int x = 10;
-        int y = 1;
+        int y = 1000;
         System.out.println(isPowerOf(x, y));
     }
 

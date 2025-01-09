@@ -2,7 +2,7 @@ package coder25.problemSolving1.mphasis;
 
 public class FirstNonRepeatCharacter {
     public static void main(String[] args) {
-        String str = "leetcode";
+        String str = "leetcode".toLowerCase();
       char s=  find(str);
         System.out.println(s+" sdmnjfnbjs");
     }
