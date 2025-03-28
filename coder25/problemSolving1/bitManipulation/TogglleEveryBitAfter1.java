@@ -2,7 +2,7 @@ package coder25.problemSolving1.bitManipulation;
 
 public class TogglleEveryBitAfter1 {
     public static void main(String[] args) {
-        int num = 10;
+        int num = 40;
         ToggleEveryBit.printBit(num);
         int x = toggleBitAfter1(num);
         ToggleEveryBit.printBit(x);
