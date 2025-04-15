@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Permutation {
+public class PermutationFail {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3};
         List<List<Integer>> permutaion = new ArrayList<>();
@@ -21,26 +21,21 @@ public class Permutation {
 //
             return;
         }
-        if (pos[currPos] >= 0) {
+        if (arr[currPos] >= 0) {
             list.add(arr[currPos]);
             pos[currPos] = -1;
-
         }
-        if (currPos > length - 1) {
-            permutaion.add(list);
-            return;
+        for (int i = 0; i < length; i++) {
+            if (arr[i] >= 0) {
+                list.add(arr[i]);
+            }
         }
-        permute(arr, start, length, permutaion, list, pos, currPos + 1);
-        int index = start + 1;
+        permutaion.add(list);
+        pos[currPos + 1] = -1;
         list = new ArrayList<>();
         list.add(arr[start]);
-        currPos = start + 1;
-        pos = new int[length];
-        Arrays.fill(arr, 1);
-        pos[index] = -1;
-        pos[start] = -1;
-        permute(arr, start + 1, length, permutaion, list, pos, 0);
+        permute(arr, start, length, permutaion, list, pos, currPos + 1);
+        permute(arr, start + 1, length, permutaion, list, pos, start + 1);
 
     }
 }
-
