@@ -6,12 +6,12 @@ public class KthLargestElementInArray {
     public static void main(String[] args) {
         int arr[] = {3,2,1,5,6,4};
         int k = 2;
-//        int x = findKthLargestElement(arr, k);
-        int x=findKthLargest(arr, k);
+        int x = findKthLargestElementBUbble(arr, k);
+//        int x=findKthLargest(arr, k);
         System.out.println(x+" is this the answer bro");
     }
 
-    private static int findKthLargestElement(int[] arr, int k) {
+    private static int findKthLargestElementBUbble(int[] arr, int k) {
         if (arr.length < k || arr == null) {
             return -1;
         }

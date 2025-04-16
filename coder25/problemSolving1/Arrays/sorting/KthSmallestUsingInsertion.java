@@ -6,7 +6,7 @@ public class KthSmallestUsingInsertion {
         int k = 2;
         System.out.println(findKthSmallesElement(arr, k - 1));
     }
-
+// wrong inmsert algo
     private static int findKthSmallesElement(int[] arr, int k) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
