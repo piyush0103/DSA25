@@ -16,8 +16,6 @@ public class AGpair {
                 countA++;
                 countG=0;
 
-
-
             }
             if (arr[i] == 'g') {
                 System.out.println(countA+"   "+countG);

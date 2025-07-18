@@ -15,7 +15,6 @@ public class CountgiousEqual01 {
         int len = 0;
         int max_len = Integer.MIN_VALUE;
         int end = 0;
-        int prefix[] = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = arr[i] == 0 ? -1 : arr[i];
         }
